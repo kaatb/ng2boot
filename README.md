@@ -1,12 +1,12 @@
 ## Introduction
 This repo serves as a walking skeleton for a single gradle project containing a frontend with its backend. Just so you can get kickstarted in setting up a similar project, and don't have to mess about too much.
 
-It contains a [jenkinsfile](ng2boot.jenkinsfile) so you can create a Jenkins 2 pipeline job to get CI running.
+It contains a [jenkinsfile](ohana.jenkinsfile) so you can create a Jenkins 2 pipeline job to get CI running.
 
 This will build both UI and backend projects and package test run results from both JUnit and Karma.
 
 ## Deliverables
-On successful build, you'll have one ng2boot-0.0.1-SNAPSHOT.ear file, containing an ng2boot-rest.war and an ng2boot-ui.war.
+On successful build, you'll have one ohana-0.0.1-SNAPSHOT.ear file, containing an ohana-rest.war and an ohana-ui.war.
 
 It's safely deployable to a WildFly application server, because of the `jboss-deployment-structure`'s exclusions in the main projects [build.gradle](build.gradle).
 
@@ -22,11 +22,11 @@ This project was lazily scaffolded from a project that had an Oracle XE locally 
 
 
 ## Stuff you'll need to change
-Change or remove nexus credentials in [ng2boot-rest/gradle.properties](ng2boot-rest/gradle.properties). These are used in [ng2boot-rest/build.gradle](ng2boot-rest/build.gradle).
+Change or remove nexus credentials in [ohana-rest/gradle.properties](ohana-rest/gradle.properties). These are used in [ohana-rest/build.gradle](ohana-rest/build.gradle).
 
-Change or remove `your-nexusurl.com` in [ng2boot-rest/build.gradle](ng2boot-rest/build.gradle).
+Change or remove `your-nexusurl.com` in [ohana-rest/build.gradle](ohana-rest/build.gradle).
 
-Change the jenkins credentials (*github_jenkins_key*) to access your github repository in [ng2boot.jenkinsfile](ng2boot.jenkinsfile).
+Change the jenkins credentials (*github_jenkins_key*) to access your github repository in [ohana.jenkinsfile](ohana.jenkinsfile).
 
-Add/uncomment and change the jdbc driver in [ng2boot-rest/build.gradle](ng2boot-rest/build.gradle).
+Add/uncomment and change the jdbc driver in [ohana-rest/build.gradle](ohana-rest/build.gradle).
 

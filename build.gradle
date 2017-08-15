@@ -24,16 +24,16 @@ subprojects {
 }
 
 dependencies {
-	deploy project(path:':ng2boot-rest', configuration: 'archives')
-	deploy project(path:':ng2boot-ui', configuration: 'archives')
+	deploy project(path:':ohana-rest', configuration: 'archives')
+	deploy project(path:':ohana-ui', configuration: 'archives')
 }
 
 ear {
-	baseName = 'ng2boot'
+	baseName = 'ohana'
 	version = '0.0.1-SNAPSHOT'
 	deploymentDescriptor {
-		webModule('ng2boot-ui.war', "/ng2boot")
-		webModule('ng2boot-rest.war', "/ng2boot/api")
+		webModule('ohana-ui.war', "/ohana")
+		webModule('ohana-rest.war', "/ohana/api")
 	}
 }
 
@@ -41,7 +41,7 @@ jbossDeploymentStructure {
     exclude 'org.jboss.logging'
 
     subdeployments {
-        'ng2boot-rest.war' {
+        'ohana-rest.war' {
             exclude 'org.jboss.logging'
         }
     }

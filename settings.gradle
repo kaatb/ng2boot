@@ -1,1 +1,1 @@
-include "ng2boot-rest", "ng2boot-ui"
+include "ohana-rest", "ohana-ui"
