@@ -52,4 +52,5 @@ test {
         html.enabled = false
     }
     systemProperty "spring.profiles.active", project.findProperty("springProfile") //so you can pass a profile so springboot test runtime can use environment specific database
+    systemProperties['jboss.socket.binding.port-offset'] = 137
 }
