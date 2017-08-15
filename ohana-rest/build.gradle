@@ -32,11 +32,11 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion")
     compile("org.hibernate:hibernate-java8:5.0.0.Final") //LocalDateTime hibernate converters
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.6.1") //to automatically deserialize LocalDateTimes etc.
+    compile 'mysql:mysql-connector-java'
 
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat:$springBootVersion") //excluded to package into .war, but still able to run locally standalone
 
-    // runtime 'com.oracle.jdbc:ojdbc6:11.2.0.4' //switch with whatever database jdbc driver you require
-    runtime("com.h2database:h2")
+    // runtime("com.h2database:h2")
 
     testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
     testCompile("junit:junit:4.12")
@@ -51,5 +51,5 @@ test {
         junitXml.enabled = true
         html.enabled = false
     }
-    // systemProperty "spring.profiles.active", project.findProperty("springProfile") //so you can pass a profile so springboot test runtime can use environment specific database
+    systemProperty "spring.profiles.active", project.findProperty("springProfile") //so you can pass a profile so springboot test runtime can use environment specific database
 }

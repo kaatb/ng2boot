@@ -11,7 +11,6 @@ public class SmurfTestBuilder {
 
     private Long id;
     private String name;
-    private String userId;
     private LocalDate creationDate;
 
     public static SmurfTestBuilder aSmurf() {
@@ -22,7 +21,6 @@ public class SmurfTestBuilder {
         return new SmurfTestBuilder()
                 .withoutId()
                 .withName(NAME)
-                .withUserId(USER_ID)
                 .withCreationDate(LocalDate.now());
     }
 
@@ -53,11 +51,6 @@ public class SmurfTestBuilder {
 
     public SmurfTestBuilder withName(String name) {
         this.name = name;
-        return this;
-    }
-
-    public SmurfTestBuilder withUserId(String userId) {
-        this.userId = userId;
         return this;
     }
 
